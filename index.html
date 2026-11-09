@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+  LINKTREE PROFISSIONAL | Identidade VW
+  Procure os comentários com ✏️ para personalizar. Dica: use Ctrl+F (Cmd+F) para trocar de uma vez
+  "Vinicius Santos", "5547988032160" (WhatsApp: DDI + DDD + número, só dígitos) e "SEU_USUARIO".
+  Foto: salve como foto-perfil.jpg na mesma pasta. Para publicar no GitHub Pages ou Netlify, mantenha o nome index.html.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinicius VW | Consultor Comercial VW 0km</title>
+  <meta name="description" content="Consultor Comercial 0km na Kolina Blu Motors. Test drive, ofertas, financiamento e contato direto.">
+  <meta name="theme-color" content="#001E50">
+
+  <!-- ✏️ PRÉVIA AO COMPARTILHAR O LINK (WhatsApp, Instagram etc.) -->
+  <meta property="og:title" content="Vinicius Santos | Consultor Comercial VW 0km">
+  <meta property="og:description" content="Test drive, ofertas da semana e simulação de financiamento.">
+  <!-- <meta property="og:image" content="https://SEU-SITE.com/capa.jpg"> -->
+
+  <!-- Fonte, ícones e Tailwind via CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <style>
+    /* ✏️ CORES DA MARCA: altere aqui para mudar toda a identidade visual */
+    :root { --midnight: #001E50; --deep: #001038; --electric: #0050FF; --glow: #7FA8FF; }
+
+    html { background: var(--deep); }
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif; color: #fff;
+      background: radial-gradient(800px 420px at 50% -80px, rgba(0,80,255,.38), transparent 70%),
+                  linear-gradient(180deg, var(--midnight), var(--deep));
+    }
+    .glow { color: var(--glow); }
+    .avatar { box-shadow: 0 0 0 5px rgba(0,80,255,.15), 0 0 36px rgba(0,80,255,.5); }
+
+    /* Card de link: vidro escuro, borda em gradiente, elevação + brilho no hover */
+    .card {
+      position: relative; display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card::before, .card::after {
+      content: ""; position: absolute; inset: 0; padding: 1px; border-radius: inherit; pointer-events: none;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+    }
+    .card::before { background: linear-gradient(135deg, rgba(255,255,255,.4), rgba(255,255,255,.08) 50%, rgba(0,80,255,.45)); }
+    .card::after  { background: linear-gradient(135deg, #fff, var(--electric) 55%, var(--glow)); opacity: 0; transition: opacity .25s ease; }
+    .card:hover, .card:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 34px -14px rgba(0,80,255,.8); }
+    .card:hover::after, .card:focus-visible::after { opacity: 1; }
+    .card:focus-visible, .soc:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+    /* Destaque (botão principal) */
+    .primary { background: linear-gradient(135deg, var(--electric), #0A36B8); box-shadow: 0 10px 30px -14px rgba(0,80,255,.9); }
+    .primary:hover { filter: brightness(1.12); }
+
+    .ico {
+      display: grid; place-items: center; flex: none; width: 2.75rem; height: 2.75rem; border-radius: .75rem;
+      background: rgba(255,255,255,.1); font-size: 1.2rem; transition: background .25s ease;
+    }
+    .card:hover .ico { background: rgba(0,80,255,.45); }
+
+    .soc {
+      display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .soc:hover { background: var(--electric); transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgba(0,80,255,.9); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .soc, .ico, .card::after { transition: none; }
+      .card:hover, .soc:hover { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+  <div class="mx-auto flex min-h-screen w-full max-w-md flex-col items-center px-5 py-10 md:py-16">
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="text-center">
+      <!-- ✏️ LOGO: monograma estilizado. Para usar o logo oficial: <img src="logo-vw.svg" alt="Volkswagen" class="mx-auto h-14 w-14"> -->
+<img 
+  src="./logovw.png" 
+  alt="Volkswagen" 
+  class="mx-auto h-16 w-16 object-contain"
+/>
+
+      <!-- ✏️ FOTO: coloque foto-perfil.jpg na mesma pasta (sem a foto, aparecem as iniciais) -->
+      <div class="avatar relative mx-auto mt-6 h-28 w-28 overflow-hidden rounded-full border-2 border-[#0050FF] bg-[#001038]">
+        <span class="absolute inset-0 grid place-items-center text-3xl font-semibold">VS</span>
+        <img src="foto-perfil.jpg" alt="Foto de Vinicius Santos" class="absolute inset-0 h-full w-full object-cover" onerror="this.remove()">
+      </div>
+
+      <!-- ✏️ NOME, CARGO E BIO -->
+      <h1 class="mt-5 text-[26px] font-bold tracking-tight">Vinicius Silva</h1>
+<!--       <p class="glow mt-1 text-sm font-semibold">Consultor de Vendas VW</p> -->
+      <p class="mt-3 text-sm text-white/70">Consultor Comercial 0km | Kolina Blu Motors</p>
+    </header>
+
+    <!-- ===== LINKS PRINCIPAIS ===== -->
+    <nav class="mt-9 w-full" aria-label="Links principais">
+      <ul class="space-y-3">
+
+        <!-- ✏️ BOTÃO 1 (destaque): WhatsApp / Test Drive. Troque o número e a mensagem depois de "text=" -->
+        <li>
+          <a class="card primary" href="https://wa.me/5547988032160?text=Ol%C3%A1%2C%20Vinicius!%20Quero%20agendar%20um%20test%20drive." target="_blank" rel="noopener noreferrer">
+            <span class="ico"><i class="fa-brands fa-whatsapp"></i></span>
+            <span><strong class="block text-[15px] font-semibold">Falar no WhatsApp</strong><small class="block text-[13px] text-white/80">Agendar Test Drive</small></span>
+          </a>
+        </li>
+
+        <!-- ✏️ BOTÃO 2: Estoque 0km / Ofertas. Cole o link do estoque ou das ofertas da concessionária -->
+        <li>
+          <a class="card" href="https://www.kolinavw.com.br/" target="_blank" rel="noopener noreferrer">
+            <span class="ico"><i class="fa-solid fa-car-side"></i></span>
+            <span><strong class="block text-[15px] font-semibold">Ver Estoque 0km</strong><small class="block text-[13px] text-white/60">Ofertas da Semana</small></span>
+          </a>
+        </li>
+
+        <!-- ✏️ BOTÃO 3: Financiamento / Avaliação. Abre o WhatsApp com mensagem pronta (ou cole o link de um simulador) -->
+        <li>
+          <a class="card" href="https://wa.me/5547988032160?text=Ol%C3%A1%2C%20Vinicius!%20Quero%20simular%20um%20financiamento%20e%20avaliar%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">
+            <span class="ico"><i class="fa-solid fa-calculator"></i></span>
+            <span><strong class="block text-[15px] font-semibold">Simular Financiamento</strong><small class="block text-[13px] text-white/60">Avaliar Veículo</small></span>
+          </a>
+        </li>
+
+        <!-- ✏️ BOTÃO 4: Localização. Troque "Kolina+Blu+Motors" pelo endereço completo (use + no lugar de espaços) -->
+        <li>
+          <a class="card" href="https://www.google.com/maps/search/?api=1&amp;query=Kolina+Blu+Motors" target="_blank" rel="noopener noreferrer">
+            <span class="ico"><i class="fa-solid fa-location-dot"></i></span>
+            <span><strong class="block text-[15px] font-semibold">Localização da Concessionária</strong><small class="block text-[13px] text-white/60">Como chegar</small></span>
+          </a>
+        </li>
+
+        <!-- ✏️ BOTÃO 5: Cartão de visitas digital (baixa um contato .vcf). Edite nome, empresa, cargo, telefone e e-mail -->
+        <li>
+          <a class="card" download="Vinicius-Santos.vcf" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0D%0AVERSION:3.0%0D%0AFN:Vinicius%20Santos%0D%0AORG:Kolina%20Blu%20Motors%0D%0ATITLE:Consultor%20Comercial%200km%0D%0ATEL;TYPE=CELL:+5547988032160%0D%0AEMAIL:contato@exemplo.com.br%0D%0AEND:VCARD">
+            <span class="ico"><i class="fa-solid fa-address-card"></i></span>
+            <span><strong class="block text-[15px] font-semibold">Cartão de Visitas Digital</strong><small class="block text-[13px] text-white/60">Salvar meu contato</small></span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="mt-auto pt-12 text-center">
+      <!-- ✏️ REDES SOCIAIS: troque SEU_USUARIO e o número do WhatsApp -->
+      <ul class="flex justify-center gap-3">
+        <li><a class="soc" href="https://instagram.com/viniciusvwkolina/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a class="soc" href="https://linkedin.com/in/vinisilvar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a class="soc" href="https://wa.me/5547988032160" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+      </ul>
+      <!-- ✏️ COPYRIGHT / CRÉDITO (o ano atualiza sozinho) -->
+      <p class="mt-6 text-xs text-white/50">© <span id="ano">2026</span> Vinicius Santos, Kolina Blu Motors</p>
+      <p class="mt-1 text-xs text-white/50">Volkswagen® é marca registrada da Volkswagen AG.</p>
+    </footer>
+
+  </div>
+
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
